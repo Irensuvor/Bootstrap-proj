@@ -5,44 +5,56 @@ import '../App.css'
 const Description = () => {
   return (
     <div>
-      <div>
-    {/* <div>Description</div>
+        
+        <div>
+        <motion.img src='img/sunny.png'
+            className='sunny'
+            width={100}
 
-      <motion.img 
-      width={'15%'}
-      src='/img/icon.png'
-      alt=''
-
-        //анимация
-        animate={{rotate:360}}
-        transition={{
-          delay:1,
-          duration: 5,
-          repeat: Infinity,
-          repeatDelay: 0.5,
-          repeatType:'reverse',
-          type:'inertia'
+        
+        animate={{
+          rotate:360,
         }}
-        />
+        transition={{
+          delay:0,
+          duration:4,
+          repeat: Infinity
+        }}
+        ></motion.img>
+          <motion.img src='img/snakes.png'
+            className='snakes'
+            width={200}
 
-        <motion.p
         initial={{
-          x:-1000,
-          opacity:0
+          x:2000,
+          opacity: 0
         }}
 
         animate={{
-            x: 500,
-            opacity: 1
+          x:0,
+          opacity: 1
         }}
         transition={{
           delay:1,
-          duration: 2,
-          type:'tween'
+          duration:2
         }}
-        >
-            Текст который появится 
-        </motion.p> */}</div>
+        ></motion.img>
+        </div>
+        
+        <motion.div
+        initial={{
+          opacity:0,
+          scale:0.5
+        }}
+        animate={{
+          scale:1,
+          opacity:1
+        }}
+        transition={{
+          duration:2
+        }}
+
+        >Happy weekends!</motion.div>
         
         <motion.div id='div1'
 
@@ -165,6 +177,8 @@ const Description = () => {
             }}>
             Нажми</motion.button>
             </div>
+
+            
 
     </div>
   )
